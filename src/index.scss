@@ -1,3 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  color: red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+h1, h2, p {
+  margin: 1rem 0;
+  text-align: center;
+  color: #006e58;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.3rem;
+  code {
+    font-size: 1.7rem;
+    letter-spacing: -0.08rem;
+    font-style: bold;
+  }
+}
+
+#display {
+  transform: translateX(calc(50vw - 50%));
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 15px -2px rgba(34, 60, 80, 0.13) inset;
+}
+
+.keyboard {
+  margin: 0 auto;
+  width: 56rem;
+  padding: 1.1rem 0 1.7rem 0;
+  border-radius: 20px;
+  background-color: #004134;
+  user-select: none;
+}
+
+.keyboard__keys-row {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.6rem;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.keyboard__keys-key {
+  height: 3rem;
+  min-width: 3rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, .8);
+  font-size: 1.25rem;
+  transition: all .2s;
+  &:not(.fn-key) {
+    background-color: rgba(255, 255, 255, .2);
+  }
+}
+
+.fn-key {
+  background-color: rgba(205, 214, 149, 0.25);
+  background-color: rgba(170, 172, 214, 0.2);
+}
+
+.keyboard__keys-key:hover {
+  background-color: rgba(255, 255, 255, .35);
+}
+
+button[data-key='Enter'] {
+  width: 6.9rem;
+}
+
+button[data-key='ShiftLeft'], button[data-key='ShiftRight'] {
+  width: 6.5rem;
+}
+
+button[data-key='ControlLeft'] {
+  width: 5.5rem;
+}
+
+button[data-key='Space'] {
+  width: 22rem;
 }

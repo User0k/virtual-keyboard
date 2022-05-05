@@ -12,7 +12,7 @@ const RU = [
   { Digit0: { keyText: '0', altText: ')' } },
   { Minus: { keyText: '-', altText: '_' } },
   { Equal: { keyText: '=', altText: '+' } },
-  { Backspace: { keyText: 'Backspace', altText: 'Backspace' } },
+  { Backspace: { keyText: 'BackSpace', altText: 'BackSpace' } },
   { Tab: { keyText: 'Tab', altText: 'Tab' } },
   { KeyQ: { keyText: 'й', altText: 'Й' } },
   { KeyW: { keyText: 'ц', altText: 'Ц' } },
@@ -58,11 +58,11 @@ const RU = [
   { MetaLeft: { keyText: 'Win', altText: 'Win' } },
   { AltLeft: { keyText: 'Alt', altText: 'Alt' } },
   { Space: { keyText: ' ', altText: ' ' } },
-  { MetaRight: { keyText: 'Win', altText: 'Win' } },
-  { ControlRight: { keyText: 'Ctrl', altText: 'Ctrl' } },
+  { AltRight: { keyText: 'Alt', altText: 'Alt' } },
   { ArrowLeft: { keyText: '↑', altText: '↑' } },
   { ArrowDown: { keyText: '↓', altText: '↓' } },
   { ArrowRight: { keyText: '→', altText: '→' } },
+  { ControlRight: { keyText: 'Ctrl', altText: 'Ctrl' } },
 ];
 
 export default RU;
