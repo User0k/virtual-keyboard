@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+html {
+  font-size: 16px;
 }
 
-h1, h2, p {
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+p {
   margin: 1rem 0;
   text-align: center;
   color: #006e58;
@@ -33,10 +38,13 @@ p {
 }
 
 #display {
-  transform: translateX(calc(50vw - 50%));
+  transform: translateX(calc(50vw - 28.5rem));
+  width: 56rem;
+  height: 20rem;
+  margin-bottom: 1rem;
   border: none;
   outline: none;
-  box-shadow: 0px 0px 15px -2px rgba(34, 60, 80, 0.13) inset;
+  box-shadow: 0px 0px 16px 0px rgba(34, 60, 80, 0.13) inset;
 }
 
 .keyboard {
@@ -46,44 +54,51 @@ p {
   border-radius: 20px;
   background-color: #004134;
   user-select: none;
-}
 
-.keyboard__keys-row {
-  display: flex;
-  justify-content: center;
-  padding-top: 0.6rem;
-  gap: 0.6rem;
-  text-align: center;
-}
+  &__keys-row {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.6rem;
+    gap: 0.6rem;
+    text-align: center;
+  }
 
-.keyboard__keys-key {
-  height: 3rem;
-  min-width: 3rem;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: rgba(255, 255, 255, .8);
-  font-size: 1.25rem;
-  transition: all .2s;
-  &:not(.fn-key) {
-    background-color: rgba(255, 255, 255, .2);
+  &__keys-key {
+    height: 3rem;
+    min-width: 3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: -3px -3px 10px -5px rgba(145, 160, 172, 0.5) inset;
+    font-size: 1.25rem;
+    transition: all 0.3s;
+
+    &:not(.fn-key) {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: rgba(0, 202, 67, 0.9);
+    }
   }
 }
 
 .fn-key {
-  background-color: rgba(205, 214, 149, 0.25);
   background-color: rgba(170, 172, 214, 0.2);
-}
-
-.keyboard__keys-key:hover {
-  background-color: rgba(255, 255, 255, .35);
 }
 
 button[data-key='Enter'] {
   width: 6.9rem;
 }
 
-button[data-key='ShiftLeft'], button[data-key='ShiftRight'] {
+button[data-key='ShiftLeft'],
+button[data-key='ShiftRight'] {
   width: 6.5rem;
 }
 
