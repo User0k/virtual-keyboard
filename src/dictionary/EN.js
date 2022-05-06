@@ -27,7 +27,7 @@ const EN = [
   { BracketLeft: { keyText: '[', altText: '{' } },
   { BracketRight: { keyText: ']', altText: '}' } },
   { Backslash: { keyText: '\\', altText: '|' } },
-  { Delete: { keyText: 'Delete', altText: 'Delete' } },
+  { Delete: { keyText: 'Del', altText: 'Del' } },
   { CapsLock: { keyText: 'CapsLock', altText: 'CapsLock' } },
   { KeyA: { keyText: 'a', altText: 'A' } },
   { KeyS: { keyText: 's', altText: 'S' } },

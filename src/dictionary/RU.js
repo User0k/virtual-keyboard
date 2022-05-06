@@ -27,7 +27,7 @@ const RU = [
   { BracketLeft: { keyText: 'х', altText: 'Х' } },
   { BracketRight: { keyText: 'ъ', altText: 'Ъ' } },
   { Backslash: { keyText: '\\', altText: '/' } },
-  { Delete: { keyText: 'Delete', altText: 'Delete' } },
+  { Delete: { keyText: 'Del', altText: 'Del' } },
   { CapsLock: { keyText: 'CapsLock', altText: 'CapsLock' } },
   { KeyA: { keyText: 'ф', altText: 'Ф' } },
   { KeyS: { keyText: 'ы', altText: 'Ы' } },
