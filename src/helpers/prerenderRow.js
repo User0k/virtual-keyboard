@@ -1,6 +1,6 @@
 import { FN_KEYS } from '../dictionary';
 
-export default function renderRow(lang, start, end) {
+export default function prerenderRow(lang, start, end) {
   const row = document.createElement('div');
   row.classList.add('keyboard__keys-row');
   lang.slice(start, end).forEach((key) => {
