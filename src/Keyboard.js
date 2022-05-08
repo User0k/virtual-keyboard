@@ -1,4 +1,6 @@
 import prerenderRow from './helpers/prerenderRow';
+import renderKeys from './helpers/renderKeys';
+import { EN, RU } from './dictionary';
 
 export default class Keyboard {
   constructor(lang) {
@@ -24,5 +26,16 @@ export default class Keyboard {
     keyboard.classList.add('keyboard');
     this.multiplyRows(keyboard, 0, 14, 29, 42, 55, 64);
     body.append(keyboard, h2, p);
+  }
+
+  toggleLang() {
+    if (this.lang === RU) {
+      this.lang = EN;
+      localStorage.setItem('lang', 'EN');
+    } else {
+      this.lang = RU;
+      localStorage.setItem('lang', 'RU');
+    }
+    renderKeys(this.lang);
   }
 }
