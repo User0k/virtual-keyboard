@@ -6,6 +6,7 @@ export default class Keyboard {
   constructor(lang) {
     this.lang = lang;
     this.caps = false;
+    this.shift = false;
     this.display = document.querySelector('#display');
     this.pressedKeys = new Set();
   }
@@ -21,7 +22,7 @@ export default class Keyboard {
     const h2 = document.createElement('h2');
     h2.textContent = 'The keyboard is created for Windows';
     const p = document.createElement('p');
-    p.innerHTML = 'For switching the language use <code>leftShift</code> + <code>leftAlt</code> buttons';
+    p.innerHTML = 'For switching the language use <code>leftShift</code> + <code>leftAlt</code> buttons on your keyboard';
     const keyboard = document.createElement('div');
     keyboard.classList.add('keyboard');
     this.multiplyRows(keyboard, 0, 14, 29, 42, 55, 64);
