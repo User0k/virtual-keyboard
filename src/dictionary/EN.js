@@ -60,7 +60,7 @@ const EN = [
   { AltLeft: { keyText: 'Alt', altText: 'Alt' } },
   { Space: { keyText: ' ', altText: ' ' } },
   { AltRight: { keyText: 'Alt', altText: 'Alt' } },
-  { ArrowLeft: { keyText: '↑', altText: '←' } },
+  { ArrowLeft: { keyText: '←', altText: '←' } },
   { ArrowDown: { keyText: '↓', altText: '↓' } },
   { ArrowRight: { keyText: '→', altText: '→' } },
   { ControlRight: { keyText: 'Ctrl', altText: 'Ctrl' } },
