@@ -37,8 +37,11 @@ document.addEventListener('keydown', (e) => {
     display.setRangeText('\t', display.selectionStart, display.selectionEnd, 'end');
   } else if (e.code === 'Backspace') {
     const start = display.selectionStart;
-    display.value = display.value.slice(0, start - 1) + display.value.slice(start);
-    display.selectionStart = display.selectionEnd;
+    const newTextAreaValue = display.value.slice(0, start - 1) + display.value.slice(start);
+    if (newTextAreaValue.length < display.value.length) {
+      display.value = newTextAreaValue;
+      display.selectionEnd = start - 1;
+    }
   } else if (e.code === 'Delete') {
     const start = display.selectionStart;
     display.value = display.value.slice(0, start) + display.value.slice(start + 1);
@@ -82,8 +85,11 @@ document.addEventListener('mousedown', (e) => {
     display.focus();
   } else if (keyId === 'Backspace') {
     const start = display.selectionStart;
-    display.value = display.value.slice(0, start - 1) + display.value.slice(start);
-    display.selectionStart = display.selectionEnd;
+    const newTextAreaValue = display.value.slice(0, start - 1) + display.value.slice(start);
+    if (newTextAreaValue.length < display.value.length) {
+      display.value = newTextAreaValue;
+      display.selectionEnd = start - 1;
+    }
     display.focus();
   } else if (keyId === 'Delete') {
     const start = display.selectionStart;
